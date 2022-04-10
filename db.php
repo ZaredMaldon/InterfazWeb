@@ -5,9 +5,9 @@ function conn(){
     $hostname = "localhost";
     $usuariodb = "root";
     $passworddb = "";
-    $dbname = "ppi";
+    $dbname = "inteexpdb";
 
-    $conectar = mysql_connect($hostname, $usuariodb, $passworddb, $dbname);
+    $conectar = new mysqli($hostname, $usuariodb, $passworddb, $dbname);
     return $conectar;
 
 }
