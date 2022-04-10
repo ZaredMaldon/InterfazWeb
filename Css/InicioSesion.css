@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=Catamaran:wght@800&family=IBM+Plex+Sans+Thai+Looped:wght@200;300;400&display=swap');
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+
+} 
+body{
+    background-image:url("https://eveniments.es/wp-content/uploads/2019/03/fondos-abstractos-para-paginas-web-wallpaper-hd-para-bajar-gratis-elegant-3d-abstract-wallpaper-2018-wallpapers-hd-en-2018-of-fondos-abstractos-para-paginas-web-wallpaper-hd-para-bajar-grati.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+#contenedor{
+    padding:20px;
+    position: relative;
+    top: 50px;
+    border-radius: 20px;
+    background-color: rgba(45, 71, 99,.9);
+    width: 400px;
+    height: 450px;
+}
+[type="text"],[type="password"]{
+    color: rgb(235, 242, 250);
+    background-color: rgba(30, 48, 68, 0.9);
+    border-radius: 5px;
+    margin: 20px;
+    border-style: double;
+    border-color: rgb(103, 148, 54);
+    width: 320px;
+    height: 40px;
+} 
+h2{
+    color: rgb(235, 242, 250);
+    margin: 10px;
+    font-size: 30pt;
+    font-stretch: expanded;
+    font-weight: bold;
+}
+[type="text"],[type="password"]{
+    display: block;
+}
+[type="submit"]{
+    background-color: rgb(103, 148, 54);
+    width: 150px;
+    position: relative;
+    top:4px;
+    right: -2px;
+}
+
+[type="submit"]:hover{
+    background-color: rgb(66, 122, 161);
+    border-color: rgb(103, 148, 54);
+}
+#logotipo{
+   
+    height: auto;
+    width: 100px;
+    top:-70px;
+}
+p{
+    position: relative;
+    top: 20px;
+}
