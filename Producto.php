@@ -40,7 +40,7 @@
                                           <div class="col-md-9 col-sm-9 col-xs-9" id="sizeC">
                                              
                                                   <div class="col-md-7 col-sm-7 col-xs-7">
-                                                      <a href="index.html"><img class="img-responsive logo " src="imagenes/logo.png" alt="Archive3D" id="Logotipo" /></a>
+                                                      <a href="index.php"><img class="img-responsive logo " src="imagenes/logo.png" alt="Archive3D" id="Logotipo" /></a>
                                                       
                                                   </div>
                                              
@@ -62,7 +62,7 @@
                                   <!-- Collect the nav links, forms, and other content for toggling -->
                                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                   <ul class="nav navbar-nav navbar-right navBar">
-                                          <li class="nav-item"><a href="index.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Inicio<span class="sr-only">(current)</span></a></li>
+                                          <li class="nav-item"><a href="index.php" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Inicio<span class="sr-only">(current)</span></a></li>
                                           <li class="nav-item"><a href="Inicio de Sesion.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Login</a></li>
                                           <li class="nav-item"><a href="Formulario de registro.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Register</a></li>
                                           <li class="nav-item"><a href="Carrito.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"><img  src="imagenes/iconos/Carrito.png"/></a></li>

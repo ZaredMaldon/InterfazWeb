@@ -240,7 +240,7 @@
                                         <div class="post-abs"><p>'.$consulta['Nombre'].'</p></div>
                                         <img src="'.$consulta['Imagen'].'" alt="">
                                     </div>
-                                    <h3 class="post-title"><a href="#">'.$consulta['Nombre'].'</a></h3>
+                                    <h3 class="post-title"><a href="Producto.html">'.$consulta['Nombre'].'</a></h3>
                                     <p class="post-description">
                                        $'.$consulta['Precio'].'
                                     </p>
