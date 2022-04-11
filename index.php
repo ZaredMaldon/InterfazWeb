@@ -44,7 +44,7 @@
                                                     <div class="col-md-9 col-sm-9 col-xs-9" id="sizeC">
                                                        
                                                             <div class="col-md-7 col-sm-7 col-xs-7">
-                                                                <a href="index.html"><img class="img-responsive logo " src="imagenes/logo.png" alt="Archive3D" id="Logotipo" /></a>
+                                                                <a href="index.php"><img class="img-responsive logo " src="imagenes/logo.png" alt="Archive3D" id="Logotipo" /></a>
                                                                 
                                                             </div>
                                                        
@@ -174,42 +174,32 @@
                 <div class="container">
                         <div class="col-md-12 noPadding">
                             <div id="news-slider" class="news-slider owl-theme owl-carousel"  action="Dashboard_SubidosRecientemente.php">
-
-                                <div class="post-slide">
-                                    <div class="post-img">
-                                        <div class="post-abs"><p>Automóvil pack</p></div>
-                                        <img src="img/new/productos/Automoviles.jpg" alt="">
-                                    </div>
-                                    <h3 class="post-title"><a href="#">Automóvil</a></h3>
-                                    <p class="post-description">
-                                       FREE
-                                    </p>
-                                </div>
-                 
-                                <div class="post-slide">
-                                    <div class="post-img">
-                                        <div class="post-abs"><p>Muebles pack</p></div>
-                                        <img src="img/new/productos/muebles.jpg" alt="">
-
-                                    </div>
-                                    <h3 class="post-title"><a href="#">Muebles</a></h3>
-                                    <p class="post-description">
-                                       $340
-                                    </p>
-                                </div>
+                                 <!-- DASHBOARD MÁS VISTOS -->
+                            <?php
+                                Include_once('db.php');
+ 
+                                $conectar = conn();
                                 
-                                <div class="post-slide">
-                                    <div class="post-img">
-                                        <div class="post-abs"><p>Casas pack</p></div>
-                                        <img src="img/new/productos/casas.jpg" alt="">
-
-                                    </div>
-                                    <h3 class="post-title"><a href="#">Casas</a></h3>
-                                    <p class="post-description">
-                                       $120
-                                    </p>
-                                </div>
+                                $conectar = conn();
+                                $sql = "Select * from Modelo order by Vistas desc limit 3;";
+                                $result = $conectar->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($conectar), E_USER_ERROR);
                                 
+                                
+                                while($consulta=mysqli_fetch_array($result)){
+                                   
+                                    echo'<div class="post-slide">
+                                    <div class="post-img">
+                                        <div class="post-abs"><p>Vistas:'.$consulta['Vistas'].'</p></div>
+                                        <img src="'.$consulta['Imagen'].'" alt="">
+                                    </div>
+                                    <h3 class="post-title"><a href="#">'.$consulta['Nombre'].'</a></h3>
+                                    <p class="post-description">
+                                       $'.$consulta['Precio'].'
+                                    </p>
+                                    </div>';
+
+                                }
+                                ?>                                              
                             </div>
                         </div>
                     </div>
@@ -232,41 +222,33 @@
                         <div class="col-md-12 noPadding">
                             <div id="news-slider" class="news-slider owl-theme owl-carousel">
 
-                                <div class="post-slide">
-                                    <div class="post-img">
-                                        <div class="post-abs"><p>Automóvil pack</p></div>
-                                        <img src="img/new/productos/Automoviles.jpg" alt="">
-                                    </div>
-                                    <h3 class="post-title"><a href="#">Automóvil</a></h3>
-                                    <p class="post-description">
-                                       FREE
-                                    </p>
-                                </div>
-
-                                <div class="post-slide">
-                                    <div class="post-img">
-                                        <div class="post-abs"><p>Muebles pack</p></div>
-                                        <img src="img/new/productos/muebles.jpg" alt="">
-
-                                    </div>
-                                    <h3 class="post-title"><a href="#">Muebles</a></h3>
-                                    <p class="post-description">
-                                       $340
-                                    </p>
-                                </div>
+                                <!-- DASHBOARD SUBIDOS RECIENTEMENTE -->
+                                <?php
+                                Include_once('db.php');
+ 
+                                $conectar = conn();
                                 
-                                <div class="post-slide">
+                                $conectar = conn();
+                                $sql = "Select * from Modelo order by fechaSubida desc limit 3;";
+                                $result = $conectar->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($conectar), E_USER_ERROR);
+                                
+                                
+                                while($consulta=mysqli_fetch_array($result)){
+                                   
+                                    echo'<div class="post-slide">
                                     <div class="post-img">
-                                        <div class="post-abs"><p>Casas pack</p></div>
-                                        <img src="img/new/productos/casas.jpg" alt="">
-
+                                        <div class="post-abs"><p>'.$consulta['Nombre'].'</p></div>
+                                        <img src="'.$consulta['Imagen'].'" alt="">
                                     </div>
-                                    <h3 class="post-title"><a href="#">Casas</a></h3>
+                                    <h3 class="post-title"><a href="#">'.$consulta['Nombre'].'</a></h3>
                                     <p class="post-description">
-                                       $120
+                                       $'.$consulta['Precio'].'
                                     </p>
-                                </div>
-                
+                                    </div>';
+
+                                }
+                                ?>                            
+
                             </div>
                         </div>
                     </div>

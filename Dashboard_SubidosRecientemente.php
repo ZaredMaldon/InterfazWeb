@@ -5,6 +5,7 @@ $json[]=array();
 
 
 
+
 $conectar = conn();
 
 $conectar = conn();
@@ -24,7 +25,5 @@ while($consulta=mysqli_fetch_array($result)){
     );
 }
 $jsonstring=json_encode($json);
-$hola="holaaaa";
-echo $jsonstring;
 
 ?>
