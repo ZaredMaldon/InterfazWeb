@@ -5,20 +5,23 @@ include_once('db.php');
 $usuario = $_POST['usuario'];
 $clave = $_POST['clave'];
 
-echo "<br>Los datos son los siguientes: <br>";
-echo "$usuario y $clave <br>";
-
 $conectar = conn();
 $sql = "SELECT * FROM `usuario` WHERE `Usuario` LIKE '$usuario' AND `Contraseña` LIKE '$clave'";
 $result = $conectar->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($conectar), E_USER_ERROR);
 
 if($result->num_rows > 0){
-    echo "<br>Si existe<br>";
+
+    header("Status: 301 Moved Permanently");
+    header("Location: index.php");
+    exit;
+
 }
 else{
-    echo "<br>Contraseña o Usuario incorrecto<br>";
-}
 
-echo "$sql";
+    header("Status: 301 Moved Permanently");
+    header("Location: Inicio de sesion.html");
+    exit;
+
+}
 
 ?>
