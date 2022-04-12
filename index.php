@@ -25,7 +25,7 @@
 
     </head>
     <body>
-     
+      <!-- Header Area Start -->
         <!-- Header Area Start -->
 		<header class="top">
                   <div class="fixedArea">
