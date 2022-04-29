@@ -15,6 +15,7 @@
     
         
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/sweetalert2.css">
         <link rel="stylesheet" href="css/owl.carousel.min.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/reset.css">
@@ -70,7 +71,7 @@
                                                     <li class="nav-item"><a href="#section3" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Populares</a></li>
                                                     <li class="nav-item"><a href="#section5" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Recientes</a></li>
                                                     <li class="nav-item"><a href="#section6" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Contacto</a></li>
-                                                    <li class="nav-item"><a href="Inicio de Sesion.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Login</a></li>
+                                                    <li class="nav-item"><a href="Inicio de Sesion.php" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Login</a></li>
                                                     <li class="nav-item"><a href="Formulario de registro.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Register</a></li>
                                                     <li class="nav-item"><a href="Carrito.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"><img  src="imagenes/iconos/Carrito.png"/></a></li>
                                                     
@@ -422,6 +423,7 @@
         <!-- Footer End -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js/vendor/jquery-1.12.0.min.js"></script>
+        <script src="js/sweetalert2.js"></script>
         <script src="js/jquery-easing/jquery.easing.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/parallax.min.js"></script>
