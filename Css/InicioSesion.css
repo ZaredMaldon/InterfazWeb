@@ -45,6 +45,8 @@ h2{
     background-color: rgb(103, 148, 54);
     width: 150px;
     position: relative;
+    border-radius: 10px;
+    border: none;
     top:4px;
     right: -2px;
 }

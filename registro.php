@@ -9,14 +9,13 @@ $edad = $_POST['edad'];
 $usuario = $_POST['usuario'];
 $clave = $_POST['clave'];
 
-echo "Los datos son los siguientes: <br>";
-echo "$nombre,$apPat, $apMat, $edad, $usuario y $clave";
-
 $conectar = conn();
 $sql = "insert into usuario(nombre, apPat, apMat, edad, usuario, contraseña) values ('$nombre', '$apPat', '$apMat', '$edad', '$usuario', '$clave')";
 $result = $conectar->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($conectar), E_USER_ERROR);
 
-echo "$sql";
+header("Status: 301 Moved Permanently");
+header("Location: index.php");
 
+exit;
 
 ?>

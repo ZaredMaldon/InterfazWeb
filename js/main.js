@@ -117,4 +117,4 @@ function initMap() {
         document.getElementById('map'), {zoom: 4, center: uluru});
     // The marker, positioned at Uluru
     var marker = new google.maps.Marker({position: uluru, map: map});
-    }
+}
