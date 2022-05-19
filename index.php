@@ -24,7 +24,7 @@ session_start();
     
         
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/sweetalert2.min.css">
+        <link rel="stylesheet" href="css/sweetalert2.css">
         <link rel="stylesheet" href="css/owl.carousel.min.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/reset.css">
