@@ -2,8 +2,6 @@
 
 session_start();
 
-
-
 ?>
 
 
@@ -24,7 +22,7 @@ session_start();
     
         
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/sweetalert2.css">
+        <link rel="stylesheet" href="css/sweetalert2.min.css">
         <link rel="stylesheet" href="css/owl.carousel.min.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/reset.css">
@@ -100,7 +98,7 @@ else{
 ?>
                                                     
 
-                                                    <li class="nav-item"><a href="Carrito.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"><img  src="imagenes/iconos/Carrito.png"/></a></li>
+                                                    <li class="nav-item"><a href="Carrito.php" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"><img  src="imagenes/iconos/Carrito.png"/></a></li>
                                                     
 
 
@@ -208,7 +206,6 @@ else{
  
                                 $conectar = conn();
                                 
-                                $conectar = conn();
                                 $sql = "Select * from Modelo order by Vistas desc limit 3;";
                                 $result = $conectar->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($conectar), E_USER_ERROR);
                                 
@@ -256,7 +253,6 @@ else{
  
                                 $conectar = conn();
                                 
-                                $conectar = conn();
                                 $sql = "Select * from Modelo order by fechaSubida desc limit 3;";
                                 $result = $conectar->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($conectar), E_USER_ERROR);
                                 
@@ -264,10 +260,15 @@ else{
                                 while($consulta=mysqli_fetch_array($result)){
                                    
                                     echo'<div class="post-slide">
-                                    <div class="post-img">
-                                        <div class="post-abs"><p>'.$consulta['Nombre'].'</p></div>
-                                        <img src="'.$consulta['Imagen'].'" alt="">
-                                    </div>
+                                    <form action = "Producto.php" method = "post">
+                                    <input type="hidden" name="idmodelo" value="'.$consulta['IdModelo'].'">
+                                    <button>
+                                        <div class="post-img">
+                                            <div class="post-abs"><p>'.$consulta['Nombre'].'</p></div>
+                                            <img src="'.$consulta['Imagen'].'" alt="">
+                                        </div>
+                                    </button>
+                                    </form>
                                     <h3 class="post-title"><a href="Producto.html">'.$consulta['Nombre'].'</a></h3>
                                     <p class="post-description">
                                        $'.$consulta['Precio'].'
