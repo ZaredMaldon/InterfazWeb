@@ -4,7 +4,7 @@
 function conn(){
     $hostname = "localhost";
     $usuariodb = "root";
-    $passworddb = "";
+    $passworddb = "Zomrromr";
     $dbname = "inteexpdb";
 
     $conectar = new mysqli($hostname, $usuariodb, $passworddb, $dbname);

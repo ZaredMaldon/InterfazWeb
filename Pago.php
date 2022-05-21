@@ -104,18 +104,16 @@
         </div>
         <div class="col2">
             <label>Card Number</label>
-            <input class="number" type="text" ng-model="ncard" maxlength="19" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+            <input class="number" type="text" id="number" ng-model="ncard" maxlength="19" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
             <label>Cardholder name</label>
-            <input class="inputname" type="text" placeholder=""/>
+            <input class="inputname" type="text" id="name" placeholder=""/>
             <label>Expiry date</label>
-            <input class="expire" type="text" placeholder="MM / YYYY"/>
+            <input class="expire" type="text" id="expire" placeholder="MM / YYYY"/>
             <label>Security Number</label>
-            <input class="ccv" type="text" placeholder="CVC" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
-<<<<<<< Updated upstream
-            <button class="buy"> Pay</button>
-=======
+            <input class="ccv" type="text" id="cvc" placeholder="CVC" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+
             <button type="submit" class="buy" id="Pago"> Pay</button>
->>>>>>> Stashed changes
+
         </div>
     </div>
     
@@ -129,13 +127,10 @@
         <script src="js/jquery.nicescroll.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/Pago.js"></script>
-<<<<<<< Updated upstream
-=======
+
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="js/SweetAlert.js"></script>
         
-
->>>>>>> Stashed changes
 
 </body>
 </html>
