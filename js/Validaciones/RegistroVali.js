@@ -27,7 +27,7 @@ $(function() {
         apPat: "Por favor ingrese su apellido",
         apMat: "Por favor ingrese su apellido",
         edad:{required:"Por favor ingrese su edad",
-        number:"Por favor ingrese un n"},
+        number:"Por favor ingrese un número"},
         usuario:"Por favor ingrese su usuario",
         clave: {
           required: "Por favor ingrese una contraseña",

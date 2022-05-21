@@ -29,6 +29,7 @@ session_start();
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/Popup.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
     </head>
@@ -449,6 +450,113 @@ else{
             </div>
         </footer>
         <!-- Footer End -->
+        <?php
+
+if(!isset($_SESSION['id'])){   
+    echo'
+    <div class="contenedor" id="Contenedor1">
+        <div class="overlay active" id="Ov1">
+                <div class="Popup">
+                    <h3>Para comenzar...</h3>
+                    <p>Somos una página que ofrece modelos 3d</br> para su uso en diferentes campos</br>Aquí puedes observar diversos modelos 3D</p>
+                    <input type="submit" id=Cerrar_Popup1 class="btn-cerrar btn btn-dark" value="Cerrar">
+                    <input type="submit" id=Siguiente1 class="btn-cerrar btn btn-dark" value="Siguiente">
+                </div>
+
+            </div>
+    </div>';
+                                          
+                                            
+}
+else{
+    echo'
+    <div class="contenedor" id="Contenedor1">
+        <div class="overlay" id="Ov1">
+                <div class="Popup">
+                    <h3>Para comenzar...</h3>
+                    <p>Somos una página que ofrece modelos 3d</br> para su uso en diferentes campos</br>Aquí puedes observar diversos modelos 3D</p>
+                    <input type="submit" id=Cerrar_Popup10 class="btn-cerrar btn btn-dark" value="Cerrar">
+                    <input type="submit" id=Siguiente10 class="btn-cerrar btn btn-dark" value="Siguiente">
+                </div>
+
+            </div>
+    </div>'  ;                                      
+}
+
+
+?>
+            
+
+    
+    <div class="contenedor" id="Contenedor2">
+            <div class="overlay" id="Ov2">
+                <div class="Popup" id="popup1">
+                    
+                    <h3>Populares</h3>
+                    <p>En este apartado puedes encontrar los modelos mas populares del momento</p>
+                    <input type="submit" id=Cerrar_Popup2 class="btn-cerrar btn btn-dark" value="Cerrar">
+                    <input type="submit" id=Siguiente2 class="btn-sig btn btn-dark" value="Siguiente">
+                </div>
+
+            </div>
+
+    </div>
+    <div class="contenedor" id="Contenedor3">
+            <div class="overlay"id="Ov3">
+                <div class="Popup">
+                   
+                    <h3>Recientes</h3>
+                    <p>Aquí encuentra los modelos más nuevos para comenzar a usar en tu proyecto</p>
+                    <input type="submit" id=Cerrar_Popup3 class="btn-cerrar btn btn-dark" value="Cerrar">
+                    <input type="submit" id=Siguiente3 class="btn-sig btn btn-dark" value="Siguiente">
+                </div>
+
+            </div>
+
+    </div>
+    <div class="contenedor" id="Contenedor4">
+            <div class="overlay"id="Ov4">
+                <div class="Popup">
+                    <h3>Contacto</h3>            
+                    <p>Gracias a que eres parte de esto, estamos siempre al pendiente de ti</br>Contáctenos cuando quiera!</p>
+                    <input type="submit" id=Cerrar_Popup4 class="btn-cerrar btn btn-dark" value="Cerrar">
+                    <input type="submit" id=Siguiente4 class="btn-sig btn btn-dark" value="Siguiente">
+                   
+                </div>
+
+            </div>
+
+    </div>
+
+    <div class="contenedor" id="Contenedor5">
+            <div class="overlay"id="Ov5">
+                <div class="Popup">
+                   
+                    <h3>Carrito de descargas</h3>
+                    <p>¡Guarda tus elecciones, no las pierdas!</br>Obtén cosas de manera gratuita o de paga</p>
+                    <input type="submit" id=Cerrar_Popup5 class="btn-cerrar btn btn-dark" value="Cerrar">
+                    <input type="submit" id=Siguiente5 class="btn-sig btn btn-dark" value="Siguiente">
+                </div>
+
+            </div>
+
+    </div>
+
+    <div class="contenedor" id="Contenedor6">
+            <div class="overlay" id="Ov6">
+                <div class="Popup">
+                    
+                    <h3>Regístrate y forma parte de nuestra comunidad</h3>
+                    <p>Registrarte es la mejor manera de empezar a crear</p>
+                    <input type="submit" id=Cerrar_Popup6 class="btn-cerrar btn btn-dark" value="Cerrar">
+                    <a href="Formulario de registro.html"><input type="submit"  id=RegistroPopup6 class="btn-sig btn btn-dark" value="Regístrate"></a>
+                </div>
+
+            </div>
+
+    </div>
+        
+
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js/vendor/jquery-1.12.0.min.js"></script>
         <script src="js/sweetalert2.min.js"></script>
@@ -459,7 +567,7 @@ else{
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/jquery.nicescroll.min.js"></script>
         <script src="js/main.js"></script>
-        
+        <script src="js/Popup.js"></script>
       
       
     </body>
