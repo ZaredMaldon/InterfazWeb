@@ -1,9 +1,11 @@
 $(document).ready(function(){
     $("#Pago").click(function(){
         Swal.fire({
-            type:'info',
+            icon:'success',
             title:'Enhorabuena',
-            text:'Pago realizado con éxito'
+            text:'Pago realizado con éxito',
+            confirmButtonText:'Seleccionar'
+            
         });
     });
 });

@@ -111,7 +111,11 @@
             <input class="expire" type="text" placeholder="MM / YYYY"/>
             <label>Security Number</label>
             <input class="ccv" type="text" placeholder="CVC" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+<<<<<<< Updated upstream
             <button class="buy"> Pay</button>
+=======
+            <button type="submit" class="buy" id="Pago"> Pay</button>
+>>>>>>> Stashed changes
         </div>
     </div>
     
@@ -125,6 +129,13 @@
         <script src="js/jquery.nicescroll.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/Pago.js"></script>
+<<<<<<< Updated upstream
+=======
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/SweetAlert.js"></script>
+        
+
+>>>>>>> Stashed changes
 
 </body>
 </html>
