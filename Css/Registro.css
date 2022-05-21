@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=Catamaran:wght@800&family=IBM+Plex+Sans+Thai+Looped:wght@200;300;400&display=swap');
-*{
+
+*{/*1 Selector universal*/
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
@@ -13,7 +14,7 @@ body{
     background-attachment: fixed;
 }
 
-[type="text"],[type="password"]{
+[type="text"],[type="password"]{/*2. combinacion de selectores*/
     color: rgb(235, 242, 250);
     background-color: rgba(30, 48, 68, 0.9);
     border-radius: 5px;
@@ -21,8 +22,9 @@ body{
     border-color: rgb(103, 148, 54);
     width: 320px;
     height: 35px;
+    margin: 5px;
 } 
-#contenedor{
+#contenedor{/*3.id*/
     padding:10px;
     position: relative;
     top: 50px;
@@ -31,22 +33,26 @@ body{
     width: 400px;
     height: 700px;
 }
-h2{
+h2{/*4.etiqueta*/
     padding-top: 30px;
     color:rgb(235, 242, 250);
     font-size: 30pt;
     font-stretch: expanded;
     font-weight: bold;
 }
-label{
-    color: rgb(235, 242, 250);
-    font-size: larger;
-    display: block;
-    font-weight:400;
+#formulario label{/*5 Selector descendente*/
+    color: rgb(180, 34, 34);
+    font-size: medium;
+    position: relative;
+    left: 30px;
+    display: flex;
+    font-weight:bold;
+    margin:0px;
+    padding: 0px;
 
 }
 
-[atri="Botones"]{
+[atri="Botones"]{/*6. Atributo*/
     position: relative;
     top: 30px;
 }
@@ -65,8 +71,11 @@ label{
 }
 
 #logotipo{
-   
     height: auto;
     width: 100px;
     top:-70px;
+}
+
+.Error{/*7.clase*/
+    border-color: red;
 }

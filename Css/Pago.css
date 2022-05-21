@@ -62,7 +62,7 @@ div.absolute {
   right: 0;
   width: 680px;
 }
-.pays .col1 {
+.pays .col1 {/**/
   perspective: 1000;
   transform-style: preserve-3d;
 }

@@ -6,7 +6,7 @@ $usuario = $_POST['usuario'];
 $clave = $_POST['clave'];
 
 $conectar = conn();
-$sql = "SELECT * FROM `usuario` WHERE `Usuario` LIKE '$usuario' AND `Contraseña` LIKE '$clave'";
+$sql = "SELECT * FROM `usuario` WHERE `Usuario` = '$usuario' AND `Contraseña` = '$clave'";
 $result = $conectar->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($conectar), E_USER_ERROR);
 
 if($result->num_rows > 0){
