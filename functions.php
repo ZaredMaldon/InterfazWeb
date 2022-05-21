@@ -6,12 +6,12 @@ function obtenerProductosEnCarrito()
 {
     $bd = conn();
     iniciarSesionSiNoEstaIniciada();
-    $idSesion = session_id();
+    $idSesion = $_SESSION['id'];   
     $sql = "SELECT modelo.idmodelo, modelo.nombre as nombre, modelo.precio as precio, modelo.imagen as imagen
      FROM modelo
      INNER JOIN carrito
      ON modelo.idmodelo = carrito.idmodelo
-     WHERE carrito.idsesion = '$idSesion'";  
+     WHERE carrito.idsesion = '$idSesion' AND carrito.Active = 1";  
     $result = $bd->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($bd), E_USER_ERROR);
     return $result->fetch_All();
 }
@@ -20,7 +20,7 @@ function quitarProductoDelCarrito($idProducto)
 {
     $bd = conn();
     iniciarSesionSiNoEstaIniciada();
-    $idSesion = session_id();
+    $idSesion = $_SESSION['id'];   
     $sql = "DELETE FROM carrito WHERE idsesion = '$idSesion' AND idmodelo = $idProducto";
     return $bd->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($bd), E_USER_ERROR);
 }
@@ -53,8 +53,8 @@ function obtenerIdsDeProductosEnCarrito()
 {
     $bd = conn();
     iniciarSesionSiNoEstaIniciada();
-    $idSesion = session_id();   
-    $sql = "SELECT IdModelo FROM carrito WHERE idsesion = '$idSesion'"; 
+    $idSesion = $_SESSION['id'];   
+    $sql = "SELECT IdModelo FROM carrito WHERE idsesion = '$idSesion' AND Active = 1"; 
     $result = $bd->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($bd), E_USER_ERROR);
 
     if($result->num_rows > 0){
@@ -73,7 +73,7 @@ function agregarProductoAlCarrito($idProducto)
 {
     $bd = conn();
     iniciarSesionSiNoEstaIniciada();
-    $idSesion = session_id();
+    $idSesion = $_SESSION['id'];
     $sql = "INSERT INTO carrito(IdSesion, IdModelo) VALUES ('$idSesion', $idProducto)";
     return $bd->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($bd), E_USER_ERROR);
 }

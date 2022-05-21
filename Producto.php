@@ -3,13 +3,28 @@ include_once('db.php');
 
 session_start();
 
+if(isset($_SESSION['lastId'])){
+    $idmodelo = $_SESSION['lastId'];
+
+    $bd = conn();
+    $sql = "SELECT idmodelo, nombre, imagen, precio FROM modelo WHERE idmodelo = $idmodelo";
+    $result = $bd->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($bd), E_USER_ERROR);
+
+    $producto=mysqli_fetch_array($result);
+
+    $nombreM = $producto['nombre'];
+    $imagen = $producto['imagen'];
+    $precio = $producto['precio'];
+    $id = $producto['idmodelo'];
+}
+
 if(isset($_POST['idmodelo'])){
 
     $idmodelo = $_POST['idmodelo'];
 
     $bd = conn();
     $sql = "SELECT idmodelo, nombre, imagen, precio FROM modelo WHERE idmodelo = $idmodelo";
-    $result = $bd->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($conectar), E_USER_ERROR);
+    $result = $bd->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($bd), E_USER_ERROR);
 
     $producto=mysqli_fetch_array($result);
 
@@ -139,10 +154,6 @@ else{
 include_once('functions.php');
 
 if(isset($_SESSION['id'])){
-
-    ?>
-    <script>console.log(<?php echo session_id(); ?>)</script>
-    <?php
 
     if(productoYaEstaEnCarrito($idmodelo)){
         ?>

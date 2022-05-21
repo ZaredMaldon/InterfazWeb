@@ -5,3 +5,8 @@ if (!isset($_POST["idmodelo"])) {
 }
 agregarProductoAlCarrito($_POST["idmodelo"]);
 header("Location: Producto.php");
+
+session_start();
+$_SESSION['lastId'] = $_POST["idmodelo"];
+
+?>
