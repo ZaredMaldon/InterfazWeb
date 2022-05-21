@@ -30,7 +30,7 @@ $productos = obtenerProductosEnCarrito();
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/Carrito.css">
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    
 </head>
 
 <body>
@@ -196,7 +196,7 @@ else{
             <div class="row">
                 <div class="col-xs-12">
                     <div class="section-title">
-                        <h3>Total: </h3>
+                        <h3 >Total: </h3>
                         <h1>$<?php echo number_format($total, 2) ?></h1>
                         <a href="Pago.php"><button type = "submit" class = "btn btn-dark">Pagar</button></a>  
                     </div>

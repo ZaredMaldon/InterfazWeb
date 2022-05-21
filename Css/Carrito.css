@@ -24,7 +24,7 @@
     font-weight: 600;
     font-family: 'Catamaran';
     color: rgb(68, 68, 68);
-
+    
 }
 span{
     position: relative;
@@ -33,7 +33,29 @@ span{
 }
 
 .Imagen2 {
+    position: flex;
+    width: auto ;
+    height: 150px ;
+}
+
+[type="submit"]{
+    background-color: rgb(103, 148, 54);
+    width: 250px;
+    height: 80px;
     position: relative;
-    width: auto !important;
-    height: 20px !important;
+    top:-90px;
+    right:-15px;
+    color:rgb(235, 242, 250);
+    font-size: larger;
+}
+[type="submit"]:hover{
+    background-color: rgb(66, 122, 161);
+    border-color: rgb(103, 148, 54);
+}
+
+.section-title h3,h1{
+    font-size: larger;
+    position:relative;
+    top:-30px;
+    right: -800px;
 }
