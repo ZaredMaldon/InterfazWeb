@@ -169,15 +169,13 @@ include_once('functions.php');
 
 if(isset($_SESSION['id'])){
 
-<<<<<<< Updated upstream
-=======
     ?>
             <script>
             console.log(<?php echo session_id(); ?>)
             </script>
             <?php
 
->>>>>>> Stashed changes
+
     if(productoYaEstaEnCarrito($idmodelo)){
         ?>
             <div class="row">
