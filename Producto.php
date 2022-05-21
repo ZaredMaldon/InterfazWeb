@@ -33,7 +33,8 @@ if(isset($_POST['idmodelo'])){
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
     
-    <link rel="stylesheet" href="css/Carrito.css">   
+      
+    <link rel="stylesheet" href="css/Producto.css">  
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">

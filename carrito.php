@@ -20,7 +20,7 @@ $productos = obtenerProductosEnCarrito();
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
     
-    <link rel="stylesheet" href="css/Carrito.css">   
+   
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -28,6 +28,7 @@ $productos = obtenerProductosEnCarrito();
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/Carrito.css">   
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
@@ -91,7 +92,7 @@ else{
 
 
 ?>
-                                          <li class="nav-item"><a href="Carrito.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"><img  src="imagenes/iconos/Carrito.png"/></a></li>
+                                          <li class="nav-item"><a href="carrito.php" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"><img  src="imagenes/iconos/Carrito.png"/></a></li>
                                           
                                     </ul>
                                   </div>
@@ -126,9 +127,10 @@ if($productos){
                             <div class="col-md-12 noPadding Contenedorproducto">
                                 <div class="col-lg-8 col-md-10 col-sm-1 PrecioContenedor">
                                     <h4 tipo="textos"><?php echo $producto[1] ?></h4>
-                                    <img src="<?php echo $producto[3] ?>" alt="icono">
+                                    <img src="<?php echo $producto[3] ?>" class="Imagen2">   
         
-                                </div>                           
+                                </div> 
+                                                    
                                 <div class="col-lg-2 col-md-1 col-sm-1 PrecioContenedor">
                                     <h2 tipo="textos">Precio</h2>
                                     <span>$<?php echo number_format($producto[2], 2)?></span>

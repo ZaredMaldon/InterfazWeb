@@ -41,7 +41,7 @@ session_start();
 					<div class="row">
 						<div class="col-md-12 col-sm-12 col-xs-12 noPadding">
                             <div class="content-wrapper one">
-                               
+                            
                                 <!-- Navbar-->
                                 <header class="header">
                                     <nav class="navbar navbar-default myNavBar">
@@ -51,12 +51,12 @@ session_start();
                                             <div class="navbar-header">
                                                 <div class="row">
                                                     <div class="col-md-9 col-sm-9 col-xs-9" id="sizeC">
-                                                       
+                                                    
                                                             <div class="col-md-7 col-sm-7 col-xs-7">
                                                                 <a href="index.php"><img class="img-responsive logo " src="imagenes/logo.png" alt="Archive3D" id="Logotipo" /></a>
                                                                 
                                                             </div>
-                                                       
+                                                    
 
 
                                                     </div>
@@ -71,7 +71,7 @@ session_start();
                                                 </div>
 
                                             </div>
-                                                     
+                                                
                                             <!-- Collect the nav links, forms, and other content for toggling -->
                                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                             <ul class="nav navbar-nav navbar-right navBar">
@@ -99,7 +99,7 @@ else{
 ?>
                                                     
 
-                                                    <li class="nav-item"><a href="Carrito.php" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"><img  src="imagenes/iconos/Carrito.png"/></a></li>
+                                                    <li class="nav-item"><a href="carrito.php" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"><img  src="imagenes/iconos/Carrito.png"/></a></li>
                                                     
 
 
@@ -228,7 +228,6 @@ else{
                                        $'.$consulta['Precio'].'
                                     </p>
                                     </div>';
-
                                 }
                                 ?>                                              
                             </div>

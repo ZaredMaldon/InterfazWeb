@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+
+.titleProduct{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-family: 'Righteous';
+    color: rgb(68, 68, 68);
+    line-height: 1;
+    text-align:left;
+  }
+  .Descripcion{
+    margin-top: 250px;
+    font-size: 20px;
+    font-family: 'Cabin';
+    color: rgb(68, 68, 68);
+    line-height: 1;
+    text-align:left;
+    
+  }
+  .Producto{
+     position: relative;
+     top: 145px;
+  }
+
+.Imagen{
+    width: auto;
+    height: 400px;
+
+}
+[type="submit"]{
+    background-color: rgb(103, 148, 54);
+    width: 150px;
+    position: relative;
+    top:135px;
+    right:-8px;
+    color:rgb(235, 242, 250);
+}
+[type="submit"]:hover{
+    background-color: rgb(66, 122, 161);
+    border-color: rgb(103, 148, 54);
+}
