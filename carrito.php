@@ -193,6 +193,18 @@ else{
    
 
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
+<<<<<<< Updated upstream
+    <script src="js/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/ajax-mail.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/Scroll.js"></script>
+
+
+=======
         <script src="js/jquery-easing/jquery.easing.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/parallax.min.js"></script>
@@ -201,5 +213,6 @@ else{
         <script src="js/jquery.nicescroll.min.js"></script>
         <script src="js/main.js"></script>
       
+>>>>>>> Stashed changes
 </body>
 </html>

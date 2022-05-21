@@ -29,7 +29,7 @@ function obtenerProductos()
 {
     $bd = conn();
     $sentencia = $bd->query("SELECT idmodelo, nombre, precio FROM modelo");
-    return $sentencia->fetchAll();
+    return $sentencia->fetch_All();
 }
 
 function productoYaEstaEnCarrito($idmodelo)
@@ -50,11 +50,10 @@ function obtenerIdsDeProductosEnCarrito()
     $idSesion = session_id();   
     $sql = "SELECT IdModelo FROM carrito WHERE idsesion = '$idSesion'"; 
     $result = $bd->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($bd), E_USER_ERROR);
-
     while($row = $result->fetch_array()) { 
-        $the_rows[] = $row; 
+    $the_rows[] = $row; 
     }
-
+    
     return $the_rows;
 }
 
