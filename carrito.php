@@ -215,6 +215,8 @@ else{
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/Scroll.js"></script>
+
 
 </body>
 
