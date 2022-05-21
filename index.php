@@ -88,8 +88,7 @@ if(!isset($_SESSION['id'])){
     <?php
 }
 else{
-    $nombre = $_SESSION['nombre'];
-    echo '<li class="nav-item"><a href="Inicio de Sesion.php" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">'.$nombre.'</a></li>';
+    echo '<li class="nav-item"><a href="Inicio de Sesion.php" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"><span id="user"></span></a></li>';
     ?>
     <li class="nav-item"><a href="logout.php" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Cerrar Sesion</a></li>
     <?php
@@ -578,3 +577,22 @@ else{
       
     </body>
 </html>
+
+<script>
+$(document).ready(function(){
+  var id= "<?php echo $_SESSION['id'] ?>";
+  if(id != '')
+  {
+   $.ajax({
+    url:"fetch.php",
+    method:"POST",
+    data:{id:id},
+    dataType:"JSON",
+    success:function(data)
+    {
+     $('#user').text(data.nombre);
+    }
+   })
+  }
+ });
+</script>

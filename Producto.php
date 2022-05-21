@@ -8,7 +8,7 @@ if(isset($_POST['idmodelo'])){
     $idmodelo = $_POST['idmodelo'];
 
     $bd = conn();
-    $sql = "SELECT idmodelo, nombre, imagen, precio FROM modelo WHERE idmodelo LIKE $idmodelo";
+    $sql = "SELECT idmodelo, nombre, imagen, precio FROM modelo WHERE idmodelo = $idmodelo";
     $result = $bd->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($conectar), E_USER_ERROR);
 
     $producto=mysqli_fetch_array($result);
@@ -147,7 +147,7 @@ if(isset($_SESSION['id'])){
     if(productoYaEstaEnCarrito($idmodelo)){
         ?>
         <div class="row">
-        <button type = "button" class = "btn btn-dark">Producto ya en carrito</button>     
+        <button type = "submit" class = "btn btn-dark">En carrito</button>     
         </div>
     
         <?php    
@@ -165,7 +165,7 @@ else{
     ?>
 
         <div class="row">
-        <button type = "button" class = "btn btn-dark">Inicia sesion</button>     
+        <button type = "submit" class = "btn btn-dark">Inicia sesion</button>     
         </div>
     
     <?php    

@@ -9,8 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
-
-    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    
     <link rel="stylesheet" href="css/Pago.css">   
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -112,23 +111,20 @@
             <input class="expire" type="text" placeholder="MM / YYYY"/>
             <label>Security Number</label>
             <input class="ccv" type="text" placeholder="CVC" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
-            <a href="index.php" id="#Pago"><button type="submit" class="buy"> Pay</button></a>
+            <button class="buy"> Pay</button>
         </div>
     </div>
     
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
         <script src="js/jquery-easing/jquery.easing.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/parallax.min.js"></script>
         <script src="js/ajax-mail.js"></script>
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/jquery.nicescroll.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/Pago.js"></script>
-        <script src="js/sweetalert2.min.js"></script>
-        <script src="js/SweetAlert.js"></script>
-        
-
 
 </body>
 </html>
