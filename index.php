@@ -214,10 +214,15 @@ else{
                                 while($consulta=mysqli_fetch_array($result)){
                                    
                                     echo'<div class="post-slide">
+                                    <form action = "Producto.php" method = "post">
+                                    <input type="hidden" name="idmodelo" value="'.$consulta['IdModelo'].'">
+                                    <button>
                                     <div class="post-img">
                                         <div class="post-abs"><p>Vistas:'.$consulta['Vistas'].'</p></div>
                                         <img src="'.$consulta['Imagen'].'" alt="">
                                     </div>
+                                    </button>
+                                    </form>
                                     <h3 class="post-title"><a href="#">'.$consulta['Nombre'].'</a></h3>
                                     <p class="post-description">
                                        $'.$consulta['Precio'].'

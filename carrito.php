@@ -1,23 +1,10 @@
 <?php
-include_once('db.php');
+
+include_once('functions.php');
 
 session_start();
 
-if(isset($_POST['idmodelo'])){
-
-    $idmodelo = $_POST['idmodelo'];
-
-    $bd = conn();
-    $sql = "SELECT idmodelo, nombre, imagen, precio FROM modelo WHERE idmodelo LIKE $idmodelo";
-    $result = $bd->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($conectar), E_USER_ERROR);
-
-    $producto=mysqli_fetch_array($result);
-
-    $nombreM = $producto['nombre'];
-    $imagen = $producto['imagen'];
-    $precio = $producto['precio'];
-    $id = $producto['idmodelo'];
-}
+$productos = obtenerProductosEnCarrito();
 
 ?>
 
@@ -27,7 +14,7 @@ if(isset($_POST['idmodelo'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto</title>
+    <title>Carrito</title>
     <link rel="icon" href="imagenes/icono.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet">
@@ -101,8 +88,10 @@ else{
     <li class="nav-item"><a href="logout.php" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Cerrar Sesion</a></li>
     <?php
 }
-    ?>
-                                          <li class="nav-item"><a href="Carrito.php" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"><img  src="imagenes/iconos/Carrito.png"/></a></li>
+
+
+?>
+                                          <li class="nav-item"><a href="Carrito.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"><img  src="imagenes/iconos/Carrito.png"/></a></li>
                                           
                                     </ul>
                                   </div>
@@ -113,67 +102,93 @@ else{
                   </div>
               </div>
         </div>
-    </div>
-    </header>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="Producto titleProduct">
-                        <h2><?php echo $nombreM ?></h2>
-                        <img class = "Imagen" src="<?php echo $imagen ?>" alt="">
-                    </div>   
-                </div>
-                <div class="col-md-4">
-                    <div class="DescripcionProducto Descripcion">
-                        <h2 style="font-weight: bolder; font-size: 30px;">Precio</h2>
-                        <h2>$<?php echo $precio ?></h2>
-                        <span>by zaredmaldonado</span>
-                    </div>
-                </div>              
-            </div>
-            <div class="row">
-                <?php              
-
-include_once('functions.php');
-
-if(isset($_SESSION['id'])){
-
-    ?>
-    <script>console.log(<?php echo session_id(); ?>)</script>
-    <?php
-
-    if(productoYaEstaEnCarrito($idmodelo)){
-        ?>
+  </div>
+</header>
+<section class="row" id="Carrito">
+    <div class="container">
         <div class="row">
-        <button type = "button" class = "btn btn-dark">Producto ya en carrito</button>     
-        </div>
+            <div class="col-xs-12">
+                <div class="section-title">
+                    <h2 id="TusProductosh2">Tus productos</h2>
+                </div>
+
+                <div class="container">
+<?php
+
+if($productos){
+
+    $total = 0;
+    foreach ($productos as $producto) {
+    $total += $producto[2];
+    ?>
+                         <div class="row ProductoCarro">
     
-        <?php    
-    }
-    else{
-        ?>
-        <form action = "agregaCarrito.php" method = "post">
-             <input type="hidden" name="idmodelo" value="<?php echo $idmodelo ?>">
-             <input type = "submit" value = "Agregar al carrito" class = "btn btn-dark">
-            </form>
-         <?php   
-    }   
+                            <div class="col-md-12 noPadding Contenedorproducto">
+                                <div class="col-lg-8 col-md-10 col-sm-1 PrecioContenedor">
+                                    <h4 tipo="textos"><?php echo $producto[1] ?></h4>
+                                    <img src="<?php echo $producto[3] ?>" alt="icono">
+        
+                                </div>                           
+                                <div class="col-lg-2 col-md-1 col-sm-1 PrecioContenedor">
+                                    <h2 tipo="textos">Precio</h2>
+                                    <span>$<?php echo number_format($producto[2], 2)?></span>
+                                </div>
+        
+                            </div>                   
+                         </div>
+    <?php 
+    } 
+
 }
 else{
-    ?>
+    $total = 0;
 
-        <div class="row">
-        <button type = "button" class = "btn btn-dark">Inicia sesion</button>     
-        </div>
+    ?>
+                         <div class="row ProductoCarro">
     
-    <?php    
+                            <div class="col-md-12 noPadding Contenedorproducto">
+                                <div class="col-lg-8 col-md-10 col-sm-1 PrecioContenedor">
+                                    <h4 tipo="textos">No hay ningun modelo en el carrito</h4>
+        
+                            </div>                   
+                         </div>
+    <?php 
 }
-    ?>
-            
+
+?>
+                     
+    
+                
+                </div>
+               
+                
+                
+              
+               
             </div>
+            
 
         </div>
+        
+        
+
+    </div>
+
+</section>
+<section class="row" id="Calculo">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-title">
+                    <h3>Total: </h3>
+                    <h1>$<?php echo number_format($total, 2) ?></h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+   
 
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
         <script src="js/jquery-easing/jquery.easing.min.js"></script>
