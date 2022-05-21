@@ -35,12 +35,18 @@ function obtenerProductos()
 function productoYaEstaEnCarrito($idmodelo)
 {
     $ids = obtenerIdsDeProductosEnCarrito();
-    foreach ($ids as $id) {
-        if ($id['IdModelo'] == $idmodelo) {
-            return true;
-        }        
+
+    if($ids == false){
+        return false;
     }
-    return false;
+    else{
+        foreach ($ids as $id) {
+            if ($id['IdModelo'] == $idmodelo) {
+                return true;
+            }        
+        }
+        return false;
+    }
 }
 
 function obtenerIdsDeProductosEnCarrito()
@@ -50,11 +56,17 @@ function obtenerIdsDeProductosEnCarrito()
     $idSesion = session_id();   
     $sql = "SELECT IdModelo FROM carrito WHERE idsesion = '$idSesion'"; 
     $result = $bd->query($sql)or trigger_error("Query failed! SQL - Error: " .mysqli_error($bd), E_USER_ERROR);
-    while($row = $result->fetch_array()) { 
-    $the_rows[] = $row; 
+
+    if($result->num_rows > 0){
+        while($row = $result->fetch_array()) { 
+            $the_rows[] = $row; 
+        }
+            
+        return $the_rows;
     }
-    
-    return $the_rows;
+    else{
+        return false;
+    } 
 }
 
 function agregarProductoAlCarrito($idProducto)
